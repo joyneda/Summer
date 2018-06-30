@@ -12,17 +12,17 @@ public class SuikaController : MonoBehaviour {
 	void Start () {
         rb = this.gameObject.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeAll;
+        timeElapsed = 0.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-       // if(Input.GetKeyDown(KeyCode.Space)){
+       //if(Input.GetKeyDown(KeyCode.Space)){
            // Pakkan();
         //}
         timeElapsed += Time.deltaTime;
-        if(timeElapsed >= timeout){
-            Destroy(this.gameObject);
-            timeElapsed = 0.0f;
+       if(timeElapsed >= timeout){
+          Destroy(this.gameObject);
         }
 	}
 	private void OnCollisionEnter(Collision collision)

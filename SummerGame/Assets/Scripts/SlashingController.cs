@@ -5,16 +5,23 @@ using UnityEngine;
 public class SlashingController : MonoBehaviour {
 
     private GameObject mainCamera;
+    private Rigidbody rb;
+    public float timeOut;
+    private float TimeElaps;
 
 	// Use this for initialization
 	void Start () {
         mainCamera = Camera.main.gameObject;
-        Rigidbody rb = this.gameObject.GetComponent<Rigidbody>();
-        rb.AddForce(mainCamera.transform.forward,ForceMode.Impulse);
+         rb = this.gameObject.GetComponent<Rigidbody>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
+        rb.AddForce(mainCamera.transform.forward, ForceMode.Impulse);
+        TimeElaps += Time.deltaTime;
+        if(timeOut>TimeElaps){
+            Destroy(this.gameObject);
+        }
 	}
 }

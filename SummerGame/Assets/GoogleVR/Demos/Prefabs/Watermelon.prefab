@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: -3
+  timeout: 10
 --- !u!114 &114920133874955742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
+  timeout: 10
 --- !u!135 &135304500182708574
 SphereCollider:
   m_ObjectHideFlags: 1
