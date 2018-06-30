@@ -6,6 +6,8 @@ public class SuikaController : MonoBehaviour {
 
     private Rigidbody rb;
     public float direction;
+    public float timeout;
+    private float timeElapsed;
 	// Use this for initialization
 	void Start () {
         rb = this.gameObject.GetComponent<Rigidbody>();
@@ -17,6 +19,11 @@ public class SuikaController : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Space)){
             Pakkan();
         }
+        timeElapsed += Time.deltaTime;
+        if(timeElapsed >= timeout){
+            Destroy(this.gameObject);
+            timeElapsed = 0.0f;
+        }
 	}
 
     void Pakkan(){
@@ -24,4 +31,5 @@ public class SuikaController : MonoBehaviour {
         rb.AddForce(new Vector3(direction, 2, 0), ForceMode.Impulse);
         rb.AddTorque(0, 0, -direction);
     }
+
 }
