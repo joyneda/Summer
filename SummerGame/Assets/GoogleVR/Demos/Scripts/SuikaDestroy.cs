@@ -8,13 +8,10 @@ public class SuikaDestroy : MonoBehaviour {
 	void Start () {
         
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
-    private void OnCollisionEnter(Collision collision)
-	{
-        Pakkan();
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }
