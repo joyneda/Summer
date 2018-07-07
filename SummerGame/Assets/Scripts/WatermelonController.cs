@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WatermelonController : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class WatermelonController : MonoBehaviour
     public float startwait;
     public float spawnWait;
     public GameObject suika;
-    public Test scoreText;
-    public int score;
+    public Text scoreText;
+    public int score ;
     // Use this for initialization
     void Start()
     {
@@ -36,11 +37,13 @@ public class WatermelonController : MonoBehaviour
             yield return new WaitForSeconds(spawnWait);
         }
     }
-    public void AddScore(int newScoreValue){
-        score += newScoreValue;
+    public void AddScore(int newSceneValue){
+        score += newSceneValue;
         UpdateScore();
     }
-    void UpdateScore(){
-        scoreText.text = "Score:" + score;
+	
+
+	void UpdateScore(){
+        scoreText.text = " " + score;
     }
 }
