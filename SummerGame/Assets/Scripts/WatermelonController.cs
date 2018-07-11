@@ -9,13 +9,13 @@ public class WatermelonController : MonoBehaviour
     public float startwait;
     public float spawnWait;
     public GameObject suika;
-    public Text scoreText;
-    public int score ;
+  //  public Text scoreText;
+  //  public int score ; 
     // Use this for initialization
     void Start()
     {
         StartCoroutine("SpawnWave");
-        UpdateScore();
+//        UpdateScore();
     }
 
     // Update is called once per frame
@@ -37,13 +37,13 @@ public class WatermelonController : MonoBehaviour
             yield return new WaitForSeconds(spawnWait);
         }
     }
-    public void AddScore(int newSceneValue){
+/*public void AddScore(int newSceneValue){
         score += newSceneValue;
         UpdateScore();
-    }
+    }*/
 	
 
-	void UpdateScore(){
+	/*void UpdateScore(){
         scoreText.text = " " + score;
-    }
+    }*/
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - zangeki
   - watermelon
+  - WatermelonController
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SuikaController : MonoBehaviour
 {
@@ -9,23 +10,26 @@ public class SuikaController : MonoBehaviour
     public float direction;
     public float timeout;
     private float timeElapsed;
-
+    public Text pointText;
+    private int count;
     public int scoreValue;
-    private WatermelonController watermelonController;
+    private GameController gameController;
     // Use this for initialization
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeAll;
         timeElapsed = 0.0f;
+        count = 0;
+       // Counter();
+
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Space)){
-        // Pakkan();
-        //}
+       
         timeElapsed += Time.deltaTime;
         if (timeElapsed >= timeout)
         {
@@ -37,6 +41,8 @@ public class SuikaController : MonoBehaviour
         if (collision.gameObject.CompareTag("zangeki"))
         {
             Pakkan();
+            count = count + 10;
+     //       Counter();
         }
     }
     void Pakkan()
@@ -45,8 +51,8 @@ public class SuikaController : MonoBehaviour
         rb.AddForce(new Vector3(direction, 2, 0), ForceMode.Impulse);
         rb.AddTorque(0, 0, -direction);
     }
-    //private void OnTriggerEnter(Collider other)
-  //  {
-   //     watermelonController.AddScore(scoreValue);
-   // }
+   // void Counter(){
+     //   pointText.text = " " + count.ToString();
+    //}
+
 }
