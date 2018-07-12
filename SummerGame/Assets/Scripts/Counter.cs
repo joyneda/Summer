@@ -9,15 +9,17 @@ public class Counter : MonoBehaviour
    public static int score; //スコア計算用変数
     public bool Hitbool = true;
 
-    void Start()
+  void Start()
     {
         score = 0;
 
         SetScore();   //初期スコアを代入して表示
     }
 
-    //cube同士での衝突＋100 cube以外との衝突＋100
-    void OnCollisionEnter(Collision collision)
+	 
+
+	//cube同士での衝突＋100 cube以外との衝突＋100
+	void OnCollisionEnter(Collision collision)
     {
         if (Hitbool)
         {

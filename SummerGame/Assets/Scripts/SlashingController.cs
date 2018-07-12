@@ -8,6 +8,7 @@ public class SlashingController : MonoBehaviour {
     private Rigidbody rb;
     public float timeOut;
     private float TimeElaps;
+    public float speed;
 
 	// Use this for initialization
 	void Start () {
@@ -18,9 +19,9 @@ public class SlashingController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        rb.AddForce(mainCamera.transform.forward, ForceMode.Impulse);
+        rb.AddForce(mainCamera.transform.forward*speed, ForceMode.Impulse);
         TimeElaps += Time.deltaTime;
-        if(timeOut>TimeElaps){
+        if(timeOut<TimeElaps){
             Destroy(this.gameObject);
         }
 	}
