@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 95467507076607990}
   m_Layer: 0
   m_Name: Watermelon
-  m_TagString: Untagged
+  m_TagString: watermelon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114920133874955742}
   m_Layer: 0
   m_Name: Object03
-  m_TagString: Untagged
+  m_TagString: watermelon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 114888421436440700}
   m_Layer: 0
   m_Name: Object01
-  m_TagString: Untagged
+  m_TagString: watermelon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395031364962342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.078, y: 1.716, z: 0}
+  m_LocalPosition: {x: -0.01, y: 0.95, z: 2.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4262327838071696}
@@ -306,9 +306,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: -3
-  timeout: 10
+  timeout: 6
   pointText: {fileID: 0}
-  scoreValue: 0
+  scoreValue: 10
 --- !u!114 &114920133874955742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,9 +321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
-  timeout: 10
+  timeout: 6
   pointText: {fileID: 0}
-  scoreValue: 0
+  scoreValue: 10
 --- !u!135 &135304500182708574
 SphereCollider:
   m_ObjectHideFlags: 1
