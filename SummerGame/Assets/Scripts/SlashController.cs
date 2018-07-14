@@ -24,6 +24,6 @@ public class SlashController : MonoBehaviour {
 
     double Mag(){
         Vector3 accel = GvrControllerInput.Accel;
-        return 0.0f;
+        return Mathf.Sqrt(accel.x*accel.x+accel.y*accel.y+accel.z*accel.z);
     }
 }
