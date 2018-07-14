@@ -6,6 +6,7 @@ public class SlashController : MonoBehaviour {
 
     public GameObject Obj;
     private GameObject mainCamera;
+    public GameObject ken;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,7 @@ public class SlashController : MonoBehaviour {
 	void Update () {
         Debug.Log(GvrControllerInput.Accel);
         if(Mag()>12.0f){
-            Instantiate(Obj, mainCamera.transform.position, Quaternion.identity);
+            Instantiate(Obj, ken.transform.position, Quaternion.identity);
         }
             
         }
