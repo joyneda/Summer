@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class AimController : MonoBehaviour {
+public class ChangeScript : MonoBehaviour {
 
-	private UnityEngine.UI.Image aim;
 	private GameObject mainCamera;
 
 	// Use this for initialization
 	void Start () {
-		aim = this.GetComponent<UnityEngine.UI.Image>();
 		mainCamera = Camera.main.gameObject;//MainCameraを取得する
 	}
 
