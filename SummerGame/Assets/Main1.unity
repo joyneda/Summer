@@ -926,6 +926,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Obj: {fileID: 1239244896592934, guid: ed2d738ce40084e46b973df10751000a, type: 2}
   ken: {fileID: 539024753}
+  lapse: 1
+  coolTime: 0.2
 --- !u!4 &1008665605
 Transform:
   m_ObjectHideFlags: 0
