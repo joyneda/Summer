@@ -11,7 +11,6 @@ public class Counter : MonoBehaviour
 
   void Start()
     {
-        score = 0;
 
         //SetScore();   //初期スコアを代入して表示
     }

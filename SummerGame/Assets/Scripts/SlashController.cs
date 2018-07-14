@@ -15,7 +15,7 @@ public class SlashController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Debug.Log(GvrControllerInput.Accel);
-        if(Mag()>3.0f){
+        if(Mag()>12.0f){
             Instantiate(Obj, mainCamera.transform.position, Quaternion.identity);
         }
             
