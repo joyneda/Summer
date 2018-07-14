@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
-    public Text scoreText; //Text用変数
+    //public Text scoreText; //Text用変数
    public static int score; //スコア計算用変数
     public bool Hitbool = true;
 
@@ -13,7 +13,7 @@ public class Counter : MonoBehaviour
     {
         score = 0;
 
-        SetScore();   //初期スコアを代入して表示
+        //SetScore();   //初期スコアを代入して表示
     }
 
 	 
@@ -27,13 +27,9 @@ public class Counter : MonoBehaviour
             {
                 Debug.Log("atat");
                 score = score + 10;
-                SetScore();
+                //SetScore();
             }
         }
-    }
-    void SetScore()
-    {
-        scoreText.text = " " + score.ToString();
     }
 
 
