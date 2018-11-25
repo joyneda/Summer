@@ -9,6 +9,7 @@ public class WatermelonController : MonoBehaviour
     public float startwait;
     public float spawnWait;
     public GameObject suika;
+    public Timecontroller tc;
   //  public Text scoreText;
   //  public int score ; 
     // Use this for initialization
@@ -34,6 +35,8 @@ public class WatermelonController : MonoBehaviour
                 Random.Range(-spawnValue.z, spawnValue.z)
             );
             Instantiate(suika, spawnPosition, Quaternion.identity);
+
+            if(tc) if (tc.TimeUp()) break;
             yield return new WaitForSeconds(spawnWait);
         }
     }

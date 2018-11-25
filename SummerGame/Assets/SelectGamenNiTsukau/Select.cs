@@ -31,7 +31,7 @@ public class Select : MonoBehaviour {
                         select = tmp;
                         if (GvrControllerInput.ClickButtonDown)
                         {
-                            select.Unselected();
+                            
                         }
                     }
                 }
@@ -53,11 +53,7 @@ public class Select : MonoBehaviour {
                     select = null;
                 }
             }
-
-            if (GvrControllerInput.ClickButtonDown)
-            {
-                select.Selected();
-            }
+            
         }
         else{
             if (select)

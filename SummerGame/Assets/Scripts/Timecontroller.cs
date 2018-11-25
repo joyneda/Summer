@@ -8,6 +8,7 @@ public class Timecontroller : MonoBehaviour {
     public Text timerText;
     public float totalTime;
     int seconds;
+    public string nextSceneName;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,8 +16,26 @@ public class Timecontroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (totalTime <= 0)
+        {
+            timeUp = true;
+        }
+        if(totalTime <= -5)
+        {
+            SceneLoading.LoadScene(nextSceneName);
+        }
+
         totalTime -= Time.deltaTime;
-        seconds = (int)totalTime;
-        timerText.text = seconds.ToString();
+        if (!timeUp)
+        {
+            seconds = (int)totalTime;
+            timerText.text = seconds.ToString();
+        }
 	}
+
+    private bool timeUp = false;
+    public bool TimeUp()
+    {
+        return timeUp;
+    }
 }
